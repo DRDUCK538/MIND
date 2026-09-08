@@ -29,7 +29,7 @@ Separated movement into a function and rendered the updated agent state correctl
 I can explain how move(pos, d) changes coordinates and rejects illegal moves.
 
 ### Remaining weakness
-idk cuh
+i still need more practice explaining function parameters 
 
 ### Evidence
 main.py
