@@ -33,4 +33,4 @@ i still need more practice explaining function parameters
 
 ### Evidence
 main.py
-Git commit: [add later]
+Git commit: complete MIND-0 gridworld foundations
