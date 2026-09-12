@@ -44,6 +44,21 @@ def move(pos, d):
        return new_pos
     else:
        return pos
+def neighbours(position):
+   row, col = position
+   possible_moves= [
+      (row - 1, col),
+      (row + 1, col),
+      (row, col - 1),
+      (row, col + 1),]
+   legal = []
+   for i in possible_moves:
+      move_row, move_col = i
+      if i not in obstacles and  0 <= move_row < rows and 0 <= move_col < cols:
+         legal.append(i)
+   return legal
+  
+
 
 
 # TESTS
@@ -55,19 +70,43 @@ assert move((0, 1), "a") == target
 
 
 
+#BFS
+order = []
+came_from = {}
+start = agent
+frontier = [start]
+visited = {start}
 
-#current loop
-while agent != target:
-   render()
-   d = input("What direction do you want to take: ")
-   if d == "stop":
+while frontier:
+   current = frontier.pop(0)
+   order.append(current)
+   if current == target:
+      print("found target")
       break
-   if d not in valid_directions:
-      print("INVALID INPUT")
-      continue
-   agent = (move(agent,d))
+   for next_position in neighbours(current):
+      if next_position not in visited:
+       came_from[next_position] = current
+       visited.add(next_position)
+       frontier.append(next_position)
+
+path = [target]
+current = target
+while current != start:
+   current = came_from[current]
+   path.append(current)
+
+path.reverse()
+print(path)
+print("visited:", visited)
+print("came_from:", came_from)
    
-if agent == target: print("well done ")
+
+
+
+
+
+
+
 
 
 
