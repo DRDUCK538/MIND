@@ -117,3 +117,8 @@ I still need more practice tracing BFS manually and understanding how different 
 - `main.py`
 - Git commit: `add BFS path reconstruction`
 - Git commit: `render BFS shortest path`
+i still need more practice explaining function parameters 
+
+### Evidence
+main.py
+Git commit: complete MIND-0 gridworld foundations
