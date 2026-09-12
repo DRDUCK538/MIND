@@ -24,6 +24,8 @@ def render():
             print("T", end=" ")
          elif coords in obstacles:
             print("#", end=" ")
+         elif coords in path:
+            print("*", end=" ")
          else:
             print(".", end=" ")
       print("")
@@ -96,9 +98,11 @@ while current != start:
    path.append(current)
 
 path.reverse()
-print(path)
-print("visited:", visited)
-print("came_from:", came_from)
+#print(path)
+#print("visited:", visited)
+#print("came_from:", came_from)
+
+render()
    
 
 
