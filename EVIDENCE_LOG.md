@@ -215,6 +215,7 @@ Dijkstra needs a priority queue because it must explore the cheapest known state
 
 ## MIND-1.4 — A*
 
+
 ### Problem
 Improve Dijkstra by using information about how close each state appears to be to the target.
 
@@ -295,3 +296,11 @@ I want to become faster at tracing priority queues and explaining why admissibil
 - A* vs Dijkstra node comparison
 - overestimating heuristic experiment
 - Git commit: `implement A* and test heuristic admissibility`
+
+
+
+
+
+##### learning rate matters
+
+ ####
